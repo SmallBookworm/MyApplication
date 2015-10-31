@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ff8c03"
+        android:gravity="center"
+        android:text="用户中心"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+
+        />
+
+
+    <Button
+        android:id="@+id/primaryAssessment"
+        android:layout_width="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:background="@drawable/login_button_login"
+        android:text="预考核"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+    <Button
+        android:id="@+id/schoolTometable"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:background="@drawable/login_button_login"
+        android:text="查看课表"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+    <Button
+        android:id="@+id/examinationResults"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:background="@drawable/login_button_login"
+        android:text="成绩查询"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+    <Button
+        android:id="@+id/curricula_variable"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:background="@drawable/login_button_login"
+        android:text="预约选课"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+    <Button
+        android:id="@+id/changePassword"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:background="@drawable/login_button_login"
+        android:text="修改密码"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="right"
+        android:text="我的邮箱：                    "
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="605144885@QQ.COM"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="资助在下：                    "
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="支付宝17862701296"
+        />
+</LinearLayout>
