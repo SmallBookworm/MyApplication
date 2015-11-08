@@ -141,7 +141,7 @@ public class PrimaryAssessmentActivity extends Activity {
                             data.put("id",doc.select("input[name=id]").first().attr("value"));
                             data.put("kg_ts", doc.select("input[name=kg_ts]").first().attr("value"));
                             data.put("kg_fs",doc.select("input[name=kg_fs]").first().attr("value"));
-                            data.put("tgfs",doc.select("input[name=tgfs]").first().attr("value"));
+                            data.put("tgfs", doc.select("input[name=tgfs]").first().attr("value"));
                             Elements elements = doc.select("input[name~=kg_answer\\d]");//不要匹配""
                             char a = '1';
                             for (Element element : elements) {
@@ -150,7 +150,9 @@ public class PrimaryAssessmentActivity extends Activity {
                                 data.put("kg" + a, transferMD5(valueA));
                                 a++;
                             }
-                            doc = Jsoup.connect(answerURL).timeout(50000).cookie(key, value).data(data).get();
+                            Jsoup.connect(answerURL).timeout(50000).cookie(key, value).data(data).get();
+                            //test
+                            handler.obtainMessage(0, i, 0, "已做").sendToTarget();
 //                           elements= doc.select("td.juhuang_1");
 //                            for (Element element : elements) {
 //                                Log.e("f", element.text());
@@ -169,14 +171,21 @@ public class PrimaryAssessmentActivity extends Activity {
         }
 
         public String transferMD5(String md5) {
-            if (md5.equals("e7a70fa81a5935b71a5935b7"))
+            if (md5.charAt(0)=='e')//e7a70fa81a5935b71a5935b7
                 return "A";
-            else if (md5.equals("fe57bcca6101409561014095"))
+            else if (md5.charAt(0)=='f')//fe57bcca6101409561014095
                 return "B";
-            else if (md5.equals("0cad1d412f80b84d2f80b84d"))
+            else if (md5.charAt(0)=='0')//0cad1d412f80b84d2f80b84d
                 return "C";
             else
                 return "D";
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(thread!=null)
+            thread.stop();
     }
 }

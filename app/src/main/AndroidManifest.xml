@@ -48,6 +48,18 @@
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
             >
         </activity>
+        <activity
+            android:name="com.example.peng.myapplication.WebActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            >
+        </activity>
+        <activity
+            android:name="com.example.peng.myapplication.FormActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            >
+        </activity>
     </application>
 
 </manifest>

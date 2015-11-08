@@ -153,7 +153,7 @@ public class LoginingActivity extends Activity {
 
         public String[] getCookie(org.apache.http.client.CookieStore cookieStore) {
             List<Cookie> cookies = cookieStore.getCookies();
-            String[] cookieMap = new String[2];
+            String[] cookieMap = new String[3];
             int i = -1;
             for (Cookie cookie : cookies) {
                 String key = cookie.getName();
@@ -162,6 +162,7 @@ public class LoginingActivity extends Activity {
 //                Log.e("fuck",value);
                 cookieMap[++i] = key;
                 cookieMap[++i] = value;
+                cookieMap[++i]=cookie.getDomain();
             }
             return cookieMap;
         }
